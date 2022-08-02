@@ -1,0 +1,76 @@
+{
+  "name": "vue-vite-h5-temp",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Haojun.Cao",
+  "description": "Developing with Vue 3 and Typescript in Vite. Using Vant UI.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LZHD/vue-vite-h5"
+  },
+  "scripts": {
+    "dev": "vite",
+    "start": "npm run dev",
+    "build:dev": "vite build --mode dev",
+    "build:test": "vite build --mode test",
+    "build:prod": "vite build --mode uat",
+    "serve": "vite preview",
+    "lint": "eslint --ext .js,.jsx,.vue,.ts,.tsx src",
+    "gen": "plop",
+    "cz": "npm run lint && git add . && cz"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "dayjs": "^1.10.7",
+    "vant": "^3.3.7",
+    "vue": "^3.2.37",
+    "vue-router": "^4.0.12",
+    "pinia": "^2.0.17"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "@types/node": "^16.11.14",
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "^5.7.0",
+    "@vitejs/plugin-vue": "^2.0.1",
+    "@vitejs/plugin-vue-jsx": "^1.3.2",
+    "@vue/babel-plugin-jsx": "^1.1.1",
+    "@vue/compiler-sfc": "^3.2.26",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/eslint-config-typescript": "^9.1.0",
+    "autoprefixer": "^10.4.0",
+    "babel-plugin-dynamic-import-node": "^2.3.3",
+    "eslint": "^8.4.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^8.2.0",
+    "lint-staged": "^12.1.2",
+    "plop": "^3.0.5",
+    "postcss": "^8.4.5",
+    "postcss-pxtorem": "^6.0.0",
+    "prettier": "^2.5.1",
+    "sass": "^1.45.0",
+    "typescript": "^4.5.2",
+    "unplugin-vue-components": "^0.21.1",
+    "vite": "^2.7.3",
+    "vue-eslint-parser": "^8.0.1",
+    "vue-tsc": "^0.29.8",
+    "yorkie": "^2.0.0",
+    "commitizen": "^4.2.4",
+    "conventional-changelog-cli": "^2.1.1",
+    "cz-conventional-changelog": "^3.3.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue,ts,tsx}": [
+      "eslint"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "engines": {
+    "node": ">=14.17.0"
+  }
+}
