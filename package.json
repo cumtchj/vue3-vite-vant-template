@@ -6,18 +6,18 @@
   "description": "Developing with Vue 3 and Typescript in Vite. Using Vant UI.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/LZHD/vue-vite-h5"
+    "url": "https://github.com/cumtchj/vue3-vite-vant-template"
   },
+  "main": "./index",
   "scripts": {
-    "dev": "vite",
-    "start": "npm run dev",
+    "start": "vite",
     "build:dev": "vite build --mode dev",
     "build:test": "vite build --mode test",
     "build:prod": "vite build --mode uat",
     "serve": "vite preview",
-    "lint": "eslint --ext .js,.jsx,.vue,.ts,.tsx src",
+    "lint": "eslint --fix --ext .js,.jsx,.vue,.ts,.tsx src",
     "gen": "plop",
-    "cz": "npm run lint && git add . && cz"
+    "cz": "git add . && cz"
   },
   "dependencies": {
     "axios": "^0.24.0",
@@ -45,7 +45,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^8.2.0",
     "lint-staged": "^12.1.2",
-    "plop": "^3.0.5",
+    "plop": "^3.1.1",
     "postcss": "^8.4.5",
     "postcss-pxtorem": "^6.0.0",
     "prettier": "^2.5.1",
@@ -55,6 +55,7 @@
     "vite": "^2.7.3",
     "vue-eslint-parser": "^8.0.1",
     "vue-tsc": "^0.29.8",
+    "unplugin-vue-define-options": "^0.7.1",
     "yorkie": "^2.0.0",
     "commitizen": "^4.2.4",
     "conventional-changelog-cli": "^2.1.1",

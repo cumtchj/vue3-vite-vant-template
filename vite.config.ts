@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-// import legacy from '@vitejs/plugin-legacy'
+import DefineOptions from 'unplugin-vue-define-options/vite';
 import Components from 'unplugin-vue-components/vite';
 import { VantResolver } from 'unplugin-vue-components/resolvers';
 import getAppConfig from './app.config';
@@ -13,6 +13,7 @@ const config = defineConfig(({ command, mode }) => {
     base: appConfig.staticRouter,
     plugins: [
       vue(),
+      DefineOptions(),
       Components({
         resolvers: [VantResolver()]
       })
@@ -21,11 +22,11 @@ const config = defineConfig(({ command, mode }) => {
       alias: appConfig.alias
     },
     build: {
-      target: 'es2015',
+      target: 'es2015'
       // minify: 'terser',
       // sourcemap: false // 是否产出sourcemap.json
     }
   };
 });
-console.log('config=====',config);
+console.log('config=====', config);
 export default config;

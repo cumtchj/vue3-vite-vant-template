@@ -1,12 +1,8 @@
-import {defineStore} from 'pinia'
+import { defineStore } from 'pinia';
 
-export default defineStore('common',{
-  state:()=>{
-    return {
-
-    }
+export default defineStore('common', {
+  state: () => {
+    return {};
   },
-  actions:{
-
-  }
-})
+  actions: {}
+});

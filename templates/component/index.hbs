@@ -5,6 +5,9 @@
 {{/if}}
 {{#if script}}
 <script lang="ts" setup>
+  defineOptions({
+    name:"{{ properCase name }}"
+  })
   console.log('{{ properCase name }}');
 </script>
 {{/if}}
